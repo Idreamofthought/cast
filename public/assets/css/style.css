@@ -23,8 +23,12 @@ button, input, select, textarea { font: inherit; }
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(10, 10, 10, 0.96); border-bottom: 1px solid rgba(255, 255, 255, 0.11); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 24px; }
 .cast-logo { display: flex; flex-direction: column; color: var(--white); font-family: 'Montserrat', 'Inter', sans-serif; font-size: 1.85rem; font-weight: 700; letter-spacing: 1px; line-height: 1; }
+.cast-name { display: inline-flex; align-items: flex-start; }
 .cast-highlight { color: var(--gold); }
+.cast-star { display: inline-block; margin: -0.12em 0 0 0.08em; color: var(--turquoise); font-size: 0.48em; transform-origin: center; animation: cast-star-flip 3.6s ease-in-out infinite; }
 .cast-sub { margin-top: 4px; color: var(--turquoise); font-size: 0.62rem; font-weight: 400; letter-spacing: 0.5px; }
+@keyframes cast-star-flip { 0%, 68%, 100% { transform: rotateY(0deg) scale(1); } 78% { transform: rotateY(180deg) scale(1.12); } 88% { transform: rotateY(360deg) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .cast-star { animation: none; } }
 .main-nav { display: flex; align-items: center; gap: 30px; color: var(--white); font-family: var(--sans); font-size: 0.73rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .main-nav a { position: relative; opacity: 0.8; }
 .main-nav a:not(.nav-cta)::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -8px; height: 2px; background: var(--turquoise); transition: right 0.2s ease; }

@@ -14,6 +14,10 @@ app.use(express.json());
 // Serve static files from /public
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/health", (_req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 // Optional contact endpoint (works even without Resend)
 app.post("/contact", async (req, res) => {
   console.log("New contact message:", req.body);
