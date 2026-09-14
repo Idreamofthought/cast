@@ -22,4 +22,4 @@ Le site ne nécessite aucune dépendance de build. Ouvrir `index.html` dans un n
 python3 -m http.server 8000
 ```
 
-Les polices Manrope et DM Mono sont chargées depuis Google Fonts lorsque la connexion est disponible ; les polices de secours permettent au site de rester lisible hors ligne.
+Les polices Montserrat et Inter sont utilisées pour la hiérarchie et la lisibilité ; les polices de secours permettent au site de rester lisible hors ligne.
